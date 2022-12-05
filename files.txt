@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Fake Instagram by Aydin.</p>
+    <p><small>Create Post.</small></p>
+
+
+  <input placeholder="Title" onchange="GetTitleValue(this)"/><br><br>
+  <input placeholder="Subtitle" onchange="GetSubtitleValue(this)"/><br><br>
+  
+  <button onclick="Post()">Post it! </button><br><br>
+
+
+  <p>Remove post by ID</p><br>
+  <input placeholder="Post ID" onchange="Axtar(this)"/>
+  <button onclick="Remove()">Remove!</button>
+  <br><br>
+
+
+  <p>Remove post by ID</p><br>
+  <input placeholder="Post id" onchange="posd(this)"/>
+  <input placeholder="Your Comment" onchange="Komment(this)"/>
+  <button onclick="Commen()">Comment!</button>
+  <br><br>
+<script>
+let coxluq = [{
+
+    id : 1,
+    title : "Salam",
+    subtitle : "Aleykume"
+}]
+
+let titleInput = "";
+let subtitleInput = "";
+let axtarInput = "";
+let posdInput = "";
+let kommentinput = "";
+
+function Addnese(title, subtitle){
+const choxlug = {
+id : coxluq[coxluq.length-1].id+1,
+title : title,
+subtitle : subtitle
+};
+coxluq.push(choxlug);
+return `Choxlug: ${choxlug.title} ${choxlug.subtitle}`;
+}
+
+function GetTitleValue(element){
+    titleInput = element.value;
+}
+function GetSubtitleValue(element){
+    subtitleInput = element.value;
+}
+function Axtar(element){
+    axtarInput = element.value;
+}
+function posd(element){
+    posdInput = element.value;
+}
+function Komment(element){
+    kommentinput = element.value;
+}
+
+function Post(){
+    Addnese(titleInput,subtitleInput);
+    console.log(`title: ${titleInput} subtitle: ${subtitleInput}`);
+}
+
+
+
+</script>
+
+    
+</body>
+</html>
